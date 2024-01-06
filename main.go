@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/elsudano/terraform-provider-vmworkstation/vmworkstation"
+	"github.com/Code-Mountains/terraform-provider-vmworkstation/vmworkstation"
 	"github.com/hashicorp/terraform-plugin-sdk/plugin"
 )
 
