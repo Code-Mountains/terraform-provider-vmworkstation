@@ -1,4 +1,4 @@
-module github.com/elsudano/terraform-provider-vmworkstation
+module github.com/Code-Mountains/terraform-provider-vmworkstation
 
 go 1.17
 
