@@ -18,7 +18,10 @@ jobs:
     runs-on: ["self-hosted","kiran","windows"]
     steps:
       - name: Cleanup workspace
-        run: rmdir /s /q C:\Users\Kiran\actions-runner\_work\_temp
+        run: |
+          if exist "C:\Users\Kiran\actions-runner\_work\_temp" (
+            rmdir /s /q "C:\Users\Kiran\actions-runner\_work\_temp"
+          )
         shell: cmd
 
       - name: Clone repository
