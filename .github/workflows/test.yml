@@ -1,0 +1,11 @@
+name: Hello World Workflow
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  say_hello:
+    runs-on: ["self-hosted","kiran","windows"]
+    steps:
+      - name: Print Hello World
+        run: echo "Hello World!"
