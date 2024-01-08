@@ -7,5 +7,9 @@ jobs:
   say_hello:
     runs-on: ["self-hosted","kiran","windows"]
     steps:
+
       - name: Print Hello World
         run: echo "Hello World!"
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
