@@ -72,3 +72,9 @@ go: downloading github.com/jmespath/go-jmespath v0.4.0
 go: downloading github.com/golang/groupcache v0.0.0-20200121045136-8c9f03a8e57e
 we made the binary
 ```
+
+# Updated Usage:
+
+```
+.\Makefile.ps1 -Version "1.1.0" build
+```

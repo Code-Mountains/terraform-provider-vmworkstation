@@ -5,6 +5,9 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/plugin"
 )
 
+// ProviderVersion will be set at compile-time using -ldflags
+var ProviderVersion string
+
 func main() {
 	plugin.Serve(&plugin.ServeOpts{
 		ProviderFunc: vmworkstation.Provider,
