@@ -17,6 +17,12 @@ jobs:
   goreleaser:
     runs-on: ["self-hosted","kiran","windows"]
     steps:
+      - name: Cleanup workspace
+        run: rmdir /s /q C:\Users\Kiran\actions-runner\_work\_temp
+
+      - name: Clone repository
+        run: git clone https://github.com/Code-Mountains/terraform-provider-vmworkstation.git .
+
       # - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
       - uses: actions/checkout@v4
         with:
