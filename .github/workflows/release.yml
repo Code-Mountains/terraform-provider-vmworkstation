@@ -19,6 +19,7 @@ jobs:
     steps:
       - name: Cleanup workspace
         run: rmdir /s /q C:\Users\Kiran\actions-runner\_work\_temp
+        shell: cmd
 
       - name: Clone repository
         run: git clone https://github.com/Code-Mountains/terraform-provider-vmworkstation.git .
