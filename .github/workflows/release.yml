@@ -15,21 +15,12 @@ permissions:
 
 jobs:
   goreleaser:
-    runs-on: ["self-hosted","kiran","windows"]
+    runs-on: ["self-hosted","ub22"]
     steps:
-
-      - name: Setup Environment Variables
-        run: echo "ACTIONS_ALLOW_UNSECURE_COMMANDS=true" >> $GITHUB_ENV
-
-      - name: Set Safe Directory
-        run: git config --global --add safe.directory C:/Users/Kiran/Documents/runner/
-
-
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        # with:
-        #   fetch-depth: 0 # Fetch all history for all tags and branches
-
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+        with:
+          # Allow goreleaser to access older tag information.
+          fetch-depth: 0
       - uses: actions/setup-go@0c52d547c9bc32b1aa3301fd7a9cb496313a4491 # v5.0.0
         with:
           go-version-file: 'go.mod'
