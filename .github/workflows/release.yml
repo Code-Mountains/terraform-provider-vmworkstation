@@ -17,13 +17,6 @@ jobs:
   goreleaser:
     runs-on: ["self-hosted","kiran","windows"]
     steps:
-      - name: Cleanup workspace
-        run: |
-          if exist "C:\Users\Kiran\actions-runner\_work\_temp" (
-            rmdir /s /q "C:\Users\Kiran\actions-runner\_work\_temp"
-          )
-        shell: cmd
-
       - name: Clone repository
         run: git clone https://github.com/Code-Mountains/terraform-provider-vmworkstation.git .
 
